@@ -25,6 +25,10 @@ class _MyHomePageState extends State<MyHomePage> {
     super.initState();
     futurePeople = fetchPeople();
     futureAlbum = fetchAlbum();
+    setState(() {
+      futureAlbum;
+      futurePeople;
+    });
   }
 
   @override
@@ -159,7 +163,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                                                         listFavoritos);
                                                                   } else {
                                                                     listFavoritos
-                                                                        .clear();
+                                                                        .remove(
+                                                                            data[index].title);
                                                                     setState(
                                                                         () {
                                                                       listFavoritos;
@@ -251,7 +256,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                                                         listFavoritos);
                                                                   } else {
                                                                     listFavoritos
-                                                                        .clear();
+                                                                        .remove(
+                                                                            data[index].title);
                                                                     setState(
                                                                         () {
                                                                       listFavoritos;

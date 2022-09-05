@@ -45,7 +45,7 @@ class _EmojiPageState extends State<EmojiPage> {
                     width: 100,
                     child: ElevatedButton(
                       onPressed: () {
-                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        Navigator.of(context).push(MaterialPageRoute(
                             builder: (context) => MyHomePage()));
                       },
                       child: FluttermojiCircleAvatar(),
